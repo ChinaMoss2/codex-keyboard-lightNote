@@ -1,0 +1,3 @@
+# 先匹配 USB 型号，再单独匹配接口父节点；只授权灯光接口。
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046a", ATTRS{idProduct}=="0079", ENV{CODEX_CHERRY_RGB}="1"
+SUBSYSTEM=="hidraw", ENV{CODEX_CHERRY_RGB}=="1", ATTRS{bInterfaceNumber}=="01", OWNER="pyl", MODE="0600"

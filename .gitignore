@@ -1,0 +1,36 @@
+# Rust 构建产物与本机运行二进制；保留 Cargo.lock。
+/rust/target/
+/bin/
+
+# Python 缓存。
+__pycache__/
+*.py[cod]
+.venv/
+
+# 会话状态、事件日志、进程锁与 IPC 文件。
+/sessions.json
+/sessions.tmp
+/events*.jsonl
+/hook-events*.jsonl
+/pending/
+/.*.lock
+*.sock
+*.log
+
+# 本机部署标记、配置回滚快照和临时备份。
+/.rust-enabled
+/rollback-python/
+*.bak
+*.bak.*
+*.tmp
+*.next
+
+# 本机凭据与编辑器文件。
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/

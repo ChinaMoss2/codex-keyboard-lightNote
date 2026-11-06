@@ -1,0 +1,14 @@
+[Unit]
+Description=Codex CHERRY 键盘状态灯
+
+[Service]
+Type=simple
+ExecStart=/home/pyl/.codex/codex-keyboard-prototype/bin/codex-keyboard daemon
+WorkingDirectory=/home/pyl/.codex/codex-keyboard-prototype
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
